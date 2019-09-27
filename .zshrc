@@ -4,7 +4,7 @@
 # Path to your oh-my-zsh installation.
   export ZSH=/home/elec/.oh-my-zsh
 
-ZSH_THEME="lambda-mod-zsh-theme/lambda-mod"
+ZSH_THEME="ys"
 
 plugins=(git zsh-completions)
 

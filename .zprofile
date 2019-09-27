@@ -1,6 +1,3 @@
-# Set bigger font
-setfont sun12x22
-
 # Qt HiDPI scaling
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
 # Qt theme
@@ -8,7 +5,7 @@ export QT_QPA_PLATFORMTHEME="qt5ct"
 
 # GTK-3 HiDPI scaling
 export GDK_SCALE=2
-export GDK_DPI_SCALE=0.32
+export GDK_DPI_SCALE=0.80
 # GTK disable overlay scrollbar
 export GTK_OVERLAY_SCROLLING=0
 
