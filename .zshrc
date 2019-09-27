@@ -6,7 +6,7 @@
 
 ZSH_THEME="ys"
 
-plugins=(git zsh-completions)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -48,8 +48,8 @@ export LESS_TERMCAP_ue=$default
 export LESS_TERMCAP_us=$green
 
 # Set ls_extended as the ls command
-alias ls='ls_extended'
-alias l='ls_extended -lAhnsd'
+alias ls='ls_extended -sn'
+alias l='ls_extended -lAhns'
 
 # Set rsync as the copy command
 alias cp='rsync -ah --info=progress2'

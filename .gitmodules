@@ -1,3 +1,6 @@
 [submodule "dotconfig/awesome/net_widgets"]
 	path = dotconfig/awesome/net_widgets
 	url = https://github.com/pltanton/net_widgets.git
+[submodule "dotconfig/awesome/lain"]
+	path = dotconfig/awesome/lain
+	url = https://github.com/lcpz/lain.git

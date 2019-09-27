@@ -43,6 +43,7 @@ sudo cp ${script_dir}/etc/systemd/user/* /etc/systemd/user/
 sudo systemctl daemon-reload
 
 ## Alsa sound config
+sudo mkdir -p /var/lib/alsa
 sudo cp ${script_dir}/var/lib/alsa/* /var/lib/alsa/
 
 # Configs
