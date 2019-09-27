@@ -15,10 +15,6 @@ git clone https://github.com/Electrux/Gentoo-Awesome.git ${script_dir}
 
 # Core settings
 
-## Bootloader
-sudo mkdir -p /boot/loader/entries
-sudo cp ${script_dir}/boot/loader/entries/gentoo.conf /boot/loader/entries/
-
 ## etc
 sudo cp ${script_dir}/etc/bluetooth/*.conf /etc/bluetooth/
 sudo cp ${script_dir}/etc/dbus-1/system.d/*.conf /etc/dbus-1/system.d/
@@ -27,7 +23,7 @@ sudo cp ${script_dir}/etc/conf.d/modules /etc/conf.d/
 sudo cp ${script_dir}/etc/pulse/*.pa /etc/pulse/
 sudo cp ${script_dir}/etc/sysctl.d/*.conf /etc/sysctl.d/
 sudo cp ${script_dir}/etc/udev/rules.d/*.rules /etc/udev/rules.d/
-sudo cp ${script_dir}/etc/X11/xorg.conf.d/40-libinput.conf /etc/X11/xorg.conf.d/
+#sudo cp ${script_dir}/etc/X11/xorg.conf.d/40-libinput.conf /etc/X11/xorg.conf.d/
 sudo ln -sf ${script_dir}/etc/portage/make.conf /etc/portage/
 
 ### Auto-login and sleep on flap down
@@ -39,7 +35,7 @@ sudo cp ${script_dir}/etc/systemd/logind.conf /etc/systemd/
 sudo ln -sf ${script_dir}/usr/bin/* /usr/bin/
 
 ## Kernel files
-sudo ln -sf ${script_dir}/usr/src/linux/.config /usr/src/linux/
+sudo ln -sf ${script_dir}/usr/src/linux/dotconfig /usr/src/linux/.config
 
 ## Systemd services
 sudo cp ${script_dir}/etc/systemd/system/*.service /etc/systemd/system/
