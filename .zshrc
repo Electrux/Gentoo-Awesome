@@ -20,7 +20,7 @@ source /usr/share/zsh/site-contrib/zsh-syntax-highlighting/zsh-syntax-highlighti
 #source ~/Git/z/z.sh
 
 # Source the dotfiles shortcut function
-#source ~/Git/Electrux/OS-Stuff/Customization/scripts/editdots.sh
+#source ~/Git/Electrux/Gentoo-Dots/Customization/scripts/editdots.sh
 
 # Make output of less command colorized.
 # Colors

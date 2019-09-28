@@ -2,7 +2,7 @@
 
 user="Electrux"
 base_dir="${HOME}/Git/${user}"
-script_dir="${base_dir}/Gentoo-Awesome"
+script_dir="${base_dir}/Gentoo-Dots"
 
 # Base
 
