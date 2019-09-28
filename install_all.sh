@@ -34,7 +34,7 @@ sudo cp ${script_dir}/etc/systemd/system/getty@tty1.service.d/override.conf /etc
 sudo cp ${script_dir}/etc/systemd/logind.conf /etc/systemd/
 
 ## Binaries
-sudo ln -sf ${script_dir}/usr/bin/* /usr/bin/
+sudo ln -sf ${script_dir}/usr/bin/* /usr/local/bin/
 
 ## Kernel files
 sudo ln -sf ${script_dir}/usr/src/linux/dotconfig /usr/src/linux/.config
@@ -52,10 +52,10 @@ sudo cp ${script_dir}/var/lib/alsa/* /var/lib/alsa/
 
 ## Core
 ln -sf ${script_dir}/dotncmpcpp ~/.ncmpcpp
-ln -sf ${script_dir}/dotconfig/{alacritty,awesome,compton,dunst,mpd,ranger,zathura,libinput-gestures.conf} ~/.config/
+ln -sf ${script_dir}/dotconfig/{alacritty,qtile,compton,dunst,mpd,ranger,zathura,libinput-gestures.conf} ~/.config/
 
 ## Others
-ln -sf ${script_dir}/.{asoundrc,gtkrc-2.0,spacemacs,vimrc,xinitrc,Xresources,zprofile,zshrc} ~/
+ln -sf ${script_dir}/.{asoundrc,gtkrc-2.0,gtkrc-2.0.mine,spacemacs,vimrc,xinitrc,Xresources,zprofile,zshrc} ~/
 
 ## For neovim
 mkdir -p ~/.config/nvim/
