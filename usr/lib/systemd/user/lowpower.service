@@ -2,4 +2,4 @@
 Description=Low power notify and suspend
 
 [Service]
-ExecStart=/usr/bin/lowpower.sh
+ExecStart=/usr/local/bin/lowpower.sh

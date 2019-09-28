@@ -7,11 +7,11 @@ script_dir="${base_dir}/Gentoo-Dots"
 # Base
 
 ## Create directories
-mkdir -p ~/{Documents,Downloads,Movies,Git/${user},.local/share/fonts,.config,.mpd}
+mkdir -p ~/{Documents,Downloads,Movies,Git/${user},.local/share/fonts,.config,.mpd,.ncmpcpp}
 
 # Clone git repositories
 
-git clone https://github.com/Electrux/Gentoo-Awesome.git ${script_dir}
+git clone https://github.com/Electrux/Gentoo-Dots.git ${script_dir}
 
 # Core settings
 
@@ -34,14 +34,15 @@ sudo cp ${script_dir}/etc/systemd/system/getty@tty1.service.d/override.conf /etc
 sudo cp ${script_dir}/etc/systemd/logind.conf /etc/systemd/
 
 ## Binaries
-sudo ln -sf ${script_dir}/usr/bin/* /usr/local/bin/
+sudo ln -sf ${script_dir}/usr/local/bin/* /usr/local/bin/
 
 ## Kernel files
 sudo ln -sf ${script_dir}/usr/src/linux/dotconfig /usr/src/linux/.config
 
 ## Systemd services
-sudo cp ${script_dir}/etc/systemd/system/*.service /etc/systemd/system/
-sudo cp ${script_dir}/etc/systemd/user/* /etc/systemd/user/
+sudo mkdir -p /usr/lib/systemd/system/
+sudo cp ${script_dir}/usr/lib/systemd/system/*.service /usr/lib/systemd/system/
+sudo cp ${script_dir}/usr/lib/systemd/user/* /usr/lib/systemd/user/
 sudo systemctl daemon-reload
 
 ## Alsa sound config
@@ -51,7 +52,8 @@ sudo cp ${script_dir}/var/lib/alsa/* /var/lib/alsa/
 # Configs
 
 ## Core
-ln -sf ${script_dir}/dotncmpcpp ~/.ncmpcpp
+mkdir -p ~/.ncmpcpp
+ln -sf ${script_dir}/dotncmpcpp/* ~/.ncmpcpp/
 ln -sf ${script_dir}/dotconfig/{alacritty,qtile,compton,dunst,mpd,ranger,zathura,libinput-gestures.conf} ~/.config/
 
 ## Others
@@ -67,7 +69,7 @@ ln -sf ${script_dir}/.vimrc ~/.config/nvim/init.vim
 sudo systemctl enable NetworkManager
 #sudo systemctl enable bluetooth
 sudo systemctl enable disable_gpe
-sudo systemctl enable hdmi_sound_toggle
+#sudo systemctl enable hdmi_sound_toggle
 #sudo systemctl start NetworkManager
 #sudo systemctl start bluetooth
 #sudo systemctl start disable_gpe
@@ -78,7 +80,7 @@ systemctl --user enable lowpower.timer
 #systemctl --user start lowpower.timer
 
 systemctl --user enable syncthing
-systemctl --user enable mpd
+#systemctl --user enable mpd
 #systemctl --user start syncthing
 #systemctl --user start mpd
 
