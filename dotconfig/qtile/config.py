@@ -1,6 +1,9 @@
+import os
+import subprocess
+
 from libqtile.config import Key, Screen, Group, Drag, Click
 from libqtile.command import lazy
-from libqtile import layout, bar, widget
+from libqtile import layout, bar, widget, hook
 
 from typing import List  # noqa: F401
 
@@ -129,6 +132,16 @@ floating_layout = layout.Floating(float_rules=[
 auto_fullscreen = True
 focus_on_window_activation = "smart"
 
+@hook.subscribe.startup_once
+def autostart():
+    autoscript = os.path.expanduser('~/.config/qtile/autostart.sh')
+    subprocess.call([autoscript])
+
+@hook.subscribe.startup
+def wallpaper():
+    wallscript = os.path.expanduser('~/.config/qtile/wallpaper.sh')
+    subprocess.call([wallscript])
+
 # XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
 # string besides java UI toolkits; you can see several discussions on the
 # mailing lists, GitHub issues, and other WM documentation that suggest setting
@@ -137,4 +150,5 @@ focus_on_window_activation = "smart"
 #
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
 # java that happens to be on java's whitelist.
-wmname = "LG3D"
+#wmname = "LG3D"
+wmname = "qtile"

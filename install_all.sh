@@ -19,6 +19,7 @@ git clone https://github.com/Electrux/Gentoo-Awesome.git ${script_dir}
 sudo cp ${script_dir}/etc/bluetooth/*.conf /etc/bluetooth/
 sudo cp ${script_dir}/etc/dbus-1/system.d/*.conf /etc/dbus-1/system.d/
 sudo cp ${script_dir}/etc/modprobe.d/*.conf /etc/modprobe.d/
+sudo cp ${script_dir}/etc/modules-load.d/*.conf /etc/modules-load.d/
 sudo cp ${script_dir}/etc/conf.d/modules /etc/conf.d/
 sudo cp ${script_dir}/etc/pulse/*.pa /etc/pulse/
 sudo cp ${script_dir}/etc/sysctl.d/*.conf /etc/sysctl.d/
