@@ -66,8 +66,8 @@ URxvt.buffered: false
 !   Font settings for Rxvt  !
 !---------------------------!
 URxvt.allow_bold:           true
-URxvt*font: xft:Source Code Pro for Powerline:style=Medium:size=7,xft:FontAwesome:size=7
-URxvt*boldFont: xft:Source Code Pro for Powerline:style=Bold:size=7,xft:FontAwesome:size=7
+URxvt*font: xft:mononoki:style=Regular:size=7,xft:FontAwesome:size=7
+URxvt*boldFont: xft:mononoki:style=Bold:size=7,xft:FontAwesome:size=7
 
 !-----------------------------!
 ! Scrollbar settings for Rxvt !
@@ -96,7 +96,7 @@ URxvt.pointerBlank:         true
 !-----------------------!
 ! Cursor settings for X !
 !-----------------------!
-Xcursor.theme: gentoo
+Xcursor.theme: Blue
 Xcursor.size: 40
 Xcursor.dpi: 220
 

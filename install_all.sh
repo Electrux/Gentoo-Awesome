@@ -23,8 +23,9 @@ sudo cp ${script_dir}/etc/conf.d/modules /etc/conf.d/
 sudo cp ${script_dir}/etc/pulse/*.pa /etc/pulse/
 sudo cp ${script_dir}/etc/sysctl.d/*.conf /etc/sysctl.d/
 sudo cp ${script_dir}/etc/udev/rules.d/*.rules /etc/udev/rules.d/
-#sudo cp ${script_dir}/etc/X11/xorg.conf.d/40-libinput.conf /etc/X11/xorg.conf.d/
+sudo cp ${script_dir}/etc/X11/xorg.conf.d/60-synaptics.conf /etc/X11/xorg.conf.d/
 sudo ln -sf ${script_dir}/etc/portage/make.conf /etc/portage/
+sudo ln -sf ${script_dir}/etc/fonts/conf.d/99-noto-emoji.conf /etc/fonts/conf.d/
 
 ### Auto-login and sleep on flap down
 sudo mkdir -p /etc/systemd/system/getty@tty1.service.d
@@ -50,7 +51,7 @@ sudo cp ${script_dir}/var/lib/alsa/* /var/lib/alsa/
 
 ## Core
 ln -sf ${script_dir}/dotncmpcpp ~/.ncmpcpp
-ln -sf ${script_dir}/dotconfig/{alacritty,awesome,compton,dunst,gtk-3.0,mpd,mpv,ranger,zathura,libinput-gestures.conf} ~/.config/
+ln -sf ${script_dir}/dotconfig/{alacritty,awesome,compton,dunst,mpd,ranger,zathura,libinput-gestures.conf} ~/.config/
 
 ## Others
 ln -sf ${script_dir}/.{asoundrc,gtkrc-2.0,spacemacs,vimrc,xinitrc,Xresources,zprofile,zshrc} ~/
