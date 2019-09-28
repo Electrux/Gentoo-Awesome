@@ -5,7 +5,7 @@ export QT_QPA_PLATFORMTHEME="qt5ct"
 
 # GTK-3 HiDPI scaling
 export GDK_SCALE=2
-export GDK_DPI_SCALE=0.80
+export GDK_DPI_SCALE=0.32
 # GTK disable overlay scrollbar
 export GTK_OVERLAY_SCROLLING=0
 
@@ -22,7 +22,7 @@ export PATH="$PATH:$GOPATH/bin"
 # Rust lang settings
 export PATH="$PATH:$HOME/.cargo/bin"
 
-eval $(keychain --eval --agents ssh $(/usr/bin/ls ~/.ssh/id_rsa* | grep -v '.pub'))
+eval $(keychain --eval --agents ssh $(/bin/ls ~/.ssh/id_rsa* | grep -v '.pub'))
 source ~/.keychain/$HOST-sh
 
 # Compile + Run a source file
