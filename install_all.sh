@@ -98,3 +98,7 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sed 's:env zsh::g')"
 mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc
 git clone https://github.com/rupa/z.git ~/Git/z
+
+# spark unicode bars
+git clone https://github.com/holman/spark.git ~/Git/spark
+sudo ln -sf ~/Git/spark/spark /usr/local/bin/

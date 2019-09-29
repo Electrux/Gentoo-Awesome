@@ -81,6 +81,10 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
+batt_icon = '#00ff00'
+vol_icon = '#00ffff'
+cal_icon = '#ffff00'
+
 screens = [
     Screen(
         top=bar.Bar(
@@ -89,9 +93,33 @@ screens = [
                 widget.Prompt(),
                 widget.TextBox("  ", name="space"),
                 widget.WindowName(),
-                widget.TextBox("default config", name="default"),
-                widget.Systray(),
+                widget.TextBox("   ", name="battery", font = 'Font Awesome 5 Free', foreground = batt_icon),
+                widget.Battery(charge_char = '', format = '{char} {percent:2.0%}'),
+                widget.TextBox("   ", name="volume", font = 'Font Awesome 5 Free', foreground = vol_icon),
+                widget.Volume(),
+                widget.TextBox("   ", name="calendar", font = 'Font Awesome 5 Free', foreground = cal_icon),
                 widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
+                widget.Systray(),
+                widget.TextBox("  ", name="space"),
+            ],
+            30,
+        ),
+    ),
+    Screen(
+        top=bar.Bar(
+            [
+                widget.GroupBox(),
+                widget.Prompt(),
+                widget.TextBox("  ", name="space"),
+                widget.WindowName(),
+                widget.TextBox("   ", name="battery", font = 'Font Awesome 5 Free', foreground = batt_icon),
+                widget.Battery(charge_char = '', format = '{char} {percent:2.0%}'),
+                widget.TextBox("   ", name="volume", font = 'Font Awesome 5 Free', foreground = vol_icon),
+                widget.Volume(),
+                widget.TextBox("   ", name="calendar", font = 'Font Awesome 5 Free', foreground = cal_icon),
+                widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
+                widget.Systray(),
+                widget.TextBox("  ", name="space"),
             ],
             30,
         ),

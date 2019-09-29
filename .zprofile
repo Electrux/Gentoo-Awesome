@@ -13,7 +13,7 @@ export GTK_OVERLAY_SCROLLING=0
 export EDITOR="/usr/bin/nvim"
 export TERMINAL="/usr/bin/alacritty"
 export BROWSER="/usr/bin/google-chrome-stable"
-export WALLPAPER="$HOME/Pictures/Wallpapers/Gorgeous-Palace-Fireworks.jpg"
+export WALLPAPER="$HOME/Pictures/Wallpapers/cyberpunk-under-bridge.jpg"
 
 # Go lang directories
 export GOPATH="$HOME/.go"
